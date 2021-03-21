@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="drag&drop.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -21,6 +23,9 @@
 <body>
     <div class = "container", style="background-color: aqua;">
         <h1>To je moja prva Bootstrap stran</h1>
+    </div>
+    <div class = "col-sm-6" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);">
+        <p>Drag one or more files to this drop zone</p>
     </div>
 </body>
 </html>
