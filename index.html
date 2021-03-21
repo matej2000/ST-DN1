@@ -15,7 +15,7 @@
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
+    <!-- Latest compiled JavaScript onerror="this.style.display='none'"-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <title>Nevem še</title>
@@ -24,8 +24,12 @@
     <div class = "container", style="background-color: aqua;">
         <h1>To je moja prva Bootstrap stran</h1>
     </div>
+    <div class = "container" class = "center_div">
+        <input type="file" multiple onchange="previewFile()">
+    </div>
     <div class = "col-sm-6" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);">
         <p>Drag one or more images to this drop zone</p>
+        <img src="" class="fill" alt="Image preview" >
     </div>
 </body>
 </html>
