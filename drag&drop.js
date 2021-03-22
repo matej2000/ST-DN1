@@ -1,3 +1,5 @@
+const loaded_files = new Array();
+
 function dropHandler(ev){
     console.log('File(s) dropped');
 
@@ -16,6 +18,7 @@ function dropHandler(ev){
                         console.log(e.target.result);
                     }*/
                     fr.addEventListener("load",function(){
+                        loaded_files.push(file);
                         preview.src = fr.result;
                         preview.style.display = "";
                         document.getElementById("drop_zone").style.border = "";
