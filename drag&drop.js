@@ -1,5 +1,5 @@
 const loaded_files = new Array();
-
+// TODO: prikazovanje več slik(zanka for skozi loaded_files), zvezdica k sliki, opis k sliki, izbirsi sliko
 function dropHandler(ev){
     console.log('File(s) dropped');
 
