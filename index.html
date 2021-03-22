@@ -27,9 +27,9 @@
     <div class = "container" class = "center_div">
         <input type="file" multiple onchange="previewFile()">
     </div>
-    <div class = "col-sm-6" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);">
+    <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);">
         <p>Drag one or more images to this drop zone</p>
-        <img src="" class="fill" alt="Image preview" >
+        <img src="" class="fill" alt="Image preview" onerror="this.style.display='none'">
     </div>
 </body>
 </html>

@@ -12,18 +12,22 @@ function dropHandler(ev){
                     var fr = new FileReader();
                     var preview = document.querySelector('img');
                    
-                    fr.onload = function(e){
+                    /*fr.onload = function(e){
                         console.log(e.target.result);
-                    }
-                    //fr.readAsDataURL(file);
+                    }*/
                     fr.addEventListener("load",function(){
                         preview.src = fr.result;
+                        preview.style.display = "";
+                        document.getElementById("drop_zone").style.border = "";
                     }, false)
                     fr.readAsDataURL(file);
                     //document.getElementById("drop_zone").style.backgroundImage = "url('"+ file.name +"')";
-                    //document.getElementById("drop_zone").style.backgroundColor = "red";
                     console.log('... file[' + i + '].name = ' + file.name + ", type = " + file.type + ", src = " + file.src);
                 }
+            }
+            else{
+                document.getElementById("drop_zone").style.border = "";
+                //document.getElementById("drop_zone").innerHTML = "Ups something went wrong with loading your file"
             }
         }
     }
@@ -36,6 +40,9 @@ function dropHandler(ev){
 
 function dragOverHandler(ev) {
     console.log('File(s) in drop zone');
+    var drop_zone = document.getElementById("drop_zone");
+    drop_zone.style.border = "5px dashed grey"
+
   
     // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
@@ -54,4 +61,12 @@ function previewFile(){
     if (file) {
         reader.readAsDataURL(file);
     }
+}
+
+function dragLeaveHandler(ev){
+    document.getElementById("drop_zone").style.border = "";
+}
+
+function dragEnterHandler(ev){
+    console.log("File entered");
 }

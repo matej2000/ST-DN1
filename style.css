@@ -1,5 +1,5 @@
 #drop_zone {
-    border: 2px dashed grey;
+    /*border: 2px dashed grey;*/
     /*width: 400px;*/
     height: 500px;
     margin: auto;
@@ -10,6 +10,8 @@
     margin: auto;
 }
 
-.fill{
-    height: 100%;
+
+img {
+    height: 100px;
+    width: 200px
 }
