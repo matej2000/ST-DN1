@@ -58,6 +58,8 @@ function previewFile(){
 
     reader.addEventListener("load", function () {
         // convert image file to base64 string
+        preview.style.display = "";
+        loaded_files.push(file);
         preview.src = reader.result;
     }, false);
 
