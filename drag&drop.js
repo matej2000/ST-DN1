@@ -1,5 +1,7 @@
 const loaded_files = new Array();
-// TODO: prikazovanje več slik(zanka for skozi loaded_files), zvezdica k sliki, opis k sliki, izbirsi sliko
+const img_tags = new Array();
+// TODO: prikazovanje več slik(zanka for skozi loaded_files), zvezdica k sliki, opis k sliki, izbirsi sliko, prilagodi za različne naprave
+// FIXME: popravi premikanje slik, popravi bug infinit loop ko prehajas cez sliko.
 function dropHandler(ev){
     console.log('File(s) dropped');
 
@@ -19,6 +21,7 @@ function dropHandler(ev){
                     }*/
                     fr.addEventListener("load",function(){
                         loaded_files.push(file);
+                        document.getElementById("dzP").innerHTML = "";
                         preview.src = fr.result;
                         preview.style.display = "";
                         document.getElementById("drop_zone").style.border = "";
@@ -30,6 +33,7 @@ function dropHandler(ev){
             }
             else{
                 document.getElementById("drop_zone").style.border = "";
+                document.getElementById("dzP").innerHTML = "";
                 //document.getElementById("drop_zone").innerHTML = "Ups something went wrong with loading your file"
             }
         }
@@ -45,6 +49,8 @@ function dragOverHandler(ev) {
     console.log('File(s) in drop zone');
     var drop_zone = document.getElementById("drop_zone");
     drop_zone.style.border = "5px dashed grey"
+    var dzp = document.getElementById("dzP");
+    dzp.innerHTML = "Drag one or more images to this drop zone"
 
   
     // Prevent default behavior (Prevent file from being opened)
@@ -70,8 +76,16 @@ function previewFile(){
 
 function dragLeaveHandler(ev){
     document.getElementById("drop_zone").style.border = "";
+    document.getElementById("dzP").innerHTML = "";
+    console.log("File left");
 }
 
 function dragEnterHandler(ev){
+    document.getElementById("drop_zone").style.border = "";
+    document.getElementById("dzP").innerHTML = "";
     console.log("File entered");
 }
+
+/*function dragOverHandler(ev){
+    console.log("File over");
+}*/

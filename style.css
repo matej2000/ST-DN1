@@ -1,3 +1,9 @@
+
+body{
+    background-color: #222831 !important;
+    color: #eeeeee !important;
+}
+
 #drop_zone {
     /*border: 2px dashed grey;*/
     /*width: 400px;*/
@@ -12,6 +18,22 @@
 
 
 img {
-    height: 100px;
-    width: 200px
+    border: #222831 solid 5px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    max-height: 300px;
+}
+
+.container{
+    background-color: #393e46;
+    text-align: center;
+}
+
+button{
+    width: auto !important;
+    display: inline-block !important;
+    border: none !important;
+    background-color:  #393e46;
+    margin: auto !important;
 }
