@@ -1,8 +1,8 @@
 const loaded_files = new Array();
 const img_tags = new Array();
 const first = true;
-// TODO: prikazovanje več slik(zanka for skozi loaded_files), zvezdica k sliki, opis k sliki, izbirsi sliko, prilagodi za različne naprave
-// FIXME: popravi premikanje slik, popravi bug infinit loop ko prehajas cez sliko.
+// TODO:  zvezdica k sliki, opis k sliki (nevem mogoče bom kej popravil), prilagodi za različne naprave, mogoce dodaj se preview(predel ki ti pokaze sliko in opis, nato kliknes okej in se doda)
+// FIXME: popravi ročno dodajanje elementov.
 function dropHandler(ev){
     console.log('File(s) dropped');
 
@@ -18,12 +18,26 @@ function dropHandler(ev){
                     //var preview = document.querySelector('img');
                     var preview = new Image();
                     var divOutside = document.createElement("div");
-                    var input = document.createElement("input");
+                    var divInside = document.createElement("div");
+                    var text = document.createElement("p");
                     
                     divOutside.style.display = "inline-block";
-                    divOutside.style.textAlign = "center";
-                    divOutside.appendChild(preview);
-                    divOutside.appendChild(input);
+                    divOutside.style.padding = "20px 20px 20px 20px"
+                    divOutside.style.position = "relative";
+                    divInside.style.position = "relative";
+                    divInside.style.textAlign = "center";
+                    divInside.style.top = "50%";
+                    divInside.style.width = "300px";
+                    divInside.style.padding = "10px 20px 40px 10px";
+                    /*divInside.style.backgroundColor = "#eeeeee";*/
+                    text.contentEditable = "true";
+                    text.style.width = "300px";
+                    text.style.maxHeight = "100px";
+                    text.style.overflow = "hidden";
+                    text.innerHTML = "You cen add a description here.";
+                    divInside.appendChild(preview);
+                    divInside.appendChild(text);
+                    divOutside.appendChild(divInside);
                     
                     divOutside.addEventListener('dblclick', function (e) {
                         console.log("Double click");
