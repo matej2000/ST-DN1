@@ -6,17 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="drag&drop.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript onerror="this.style.display='none'"-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 
     <title>Nevem še</title>
 </head>
@@ -28,51 +18,71 @@
         <input type="file" multiple onchange="previewFile()">
     </div>
     <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
-        <p id="dzP"></p>
-        <div>
-            <button class="carousel-control-prev position-relative" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
+        <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
+        
+    
+        
+        <!--Carousel wraper-->
+        <!--
+        <div id="gallery" class="carousel slide" data-interval="false" data-md-ride="carousel">
+            <div class="carousel-inner py-4">
 
-            <button class="carousel-control-next position-relative" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-
-        <div class="carousel-inner py-4">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                      <div class="col-sm">
-                        <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                      </div>
-                      <div class="col-sm">
-                        <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                      </div>
-                      <div class="col-sm">
-                        <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                      </div>
-                    </div>
+                <div>
+                    <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#gallery" data-mdb-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"  data-bs-target="gallery"></span>
+                    </button>
+        
+                    <button class="carousel-control-next position-relative" type="button" data-mdb-target="#gallery" data-mdb-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
+
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
                         <div class="col-sm">
                             <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                          </div>
-                          <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
                             <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                          </div>
-                          <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
                             <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                          </div>
+                        </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
+                            </div>
+                            <div class="col-sm">
+                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
+                            </div>
+                            <div class="col-sm">
+                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+        -->
+
+        <!--Coursel wrapper-->
+
+
+    </div>
+    <div id="drop_in">
+        <p id="dzP"></p>
+    </div>
+    <div id="preview_zone">
+        
     </div>
 </body>
 </html>
