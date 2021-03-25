@@ -14,11 +14,15 @@
     <div class = "container", style="background-color: #222831;">
         <h1>Galerija</h1>
     </div>
-    <div class = "container">
+    <div id="select" class="container" >
         <input type="file" multiple onchange="previewFile()">
     </div>
+    <div id="preview_zone" class="container" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
+        <img src="virus2.png" alt="Image preview" onerror="this.style.display='none'">
+        <textarea name="Description" rows="5" cols="30" style="resize: none;" maxlength="100"> Helo</textarea>
+    </div>
     <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
-        <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
+        
         
     
         

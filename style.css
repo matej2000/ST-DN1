@@ -23,6 +23,12 @@ body{
     margin-top: 19px;
 }
 
+#preview_zone {
+    min-height: 500px;
+    margin: auto;
+    margin-top: 0px;
+}
+
 .center_div {
     margin: auto;
 }
@@ -46,6 +52,10 @@ button{
 
 #drop_in {
     margin: top;
+}
+
+#select{
+    padding-bottom: 0px !important;
 }
 
 

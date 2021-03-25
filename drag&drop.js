@@ -34,7 +34,7 @@ function dropHandler(ev){
                     text.style.width = "300px";
                     text.style.maxHeight = "100px";
                     text.style.overflow = "hidden";
-                    text.innerHTML = "You cen add a description here.";
+                    text.innerHTML = "You can add a description here.";
                     divInside.appendChild(preview);
                     divInside.appendChild(text);
                     divOutside.appendChild(divInside);
