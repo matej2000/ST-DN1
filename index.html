@@ -8,28 +8,35 @@
     <script src="drag&drop.js"></script>
     
 
-    <title>Nevem še</title>
+    <title>Gallery</title>
 </head>
 <body>
-    <div class = "container", style="background-color: #222831;">
-        <h1>Galerija</h1>
+    <div class = "container", style="background-color: #222831; text-align: left;">
+        <h1>Preview</h1>
     </div>
-    <div id="select" class="container" >
-        <input type="file" multiple onchange="previewFile()">
-    </div>
-    <div id="preview_zone" class="container" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
-        <div style="position: relative; text-align: center; display: inline-block;">
-            <div style="position: relative; top: 50%; width: 500px;">
-                <img src="virus2.png" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
-                <textarea name="Description" rows="5" cols="30" style="resize: none" maxlength="100"> Helo</textarea>
-                <div style="padding-top: 40px;">
-                    <!--<button style="background-color: #eeee;">Confirm</button>
-                    <button style="background-color: #eeee;">Cancel</button>-->
-                    <a class="button2" style="user-select: none;">Confirm</a>
-                    <a class="button2" style="user-select: none;">Cancel</a>
+    <div id="border" class="container" ondrop = "dropHandlerPreview(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
+        <div id="select" class="container" >
+            <input id="selectFile" type="file" multiple onchange="previewFile()">
+        </div>
+        <div id="preview_zone" class="container" >
+            <div style="position: relative; text-align: center; display: inline-block;">
+                <div style="position: relative; top: 50%; width: 500px;">
+                   
+                    <img src="" id="image_preview" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
+                    <textarea id="description"  placeholder="You can add a description here."  name="Description" rows="5" cols="30" style="resize: none; visibility: hidden;" maxlength="100"></textarea>
+                    <div id="buttons" style="padding-top: 40px; visibility: hidden;">
+                        <!--<button style="background-color: #eeee;">Confirm</button>
+                        <button style="background-color: #eeee;">Cancel</button>-->
+                        <a class="button2" style="user-select: none;" onclick="addToGallery();">Confirm</a>
+                        <a class="button2" style="user-select: none;" onclick="clearPreview();">Cancel</a>
+                    </div>
                 </div>
             </div>
+            <p id="dropP" style="margin: 0px; bottom: 10px !important;">Drag and drop an immage.</p>
         </div>
+    </div>
+    <div class = "container", style="background-color: #222831; text-align: left;">
+        <h1>Gallery</h1>
     </div>
     <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
         
@@ -121,6 +128,8 @@
     <p onclick="editTrue(event);" contenteditable="true" style="max-height: 100px; overflow: hidden;"> </p>
 
     -->
-
+    <div class="footer">
+        <p>Footer</p>
+    </div>
 </body>
 </html>

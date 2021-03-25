@@ -94,6 +94,15 @@ a.button2:active{
     border-color:#BBBBBB;
 }
 
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d65a31;
+    text-align: center;
+}
+
 /*@media all and (max-width:30em){
     a.button2{
         display:block; margin:0.4em auto;
