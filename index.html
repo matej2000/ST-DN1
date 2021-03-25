@@ -19,12 +19,14 @@
     </div>
     <div id="preview_zone" class="container" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
         <div style="position: relative; text-align: center; display: inline-block;">
-            <div style="position: relative; top: 50%; width: 300px;">
+            <div style="position: relative; top: 50%; width: 500px;">
                 <img src="virus2.png" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
                 <textarea name="Description" rows="5" cols="30" style="resize: none" maxlength="100"> Helo</textarea>
                 <div style="padding-top: 40px;">
-                    <button style="background-color: #eeee;">Confirm</button>
-                    <button style="background-color: #eeee;">Cancel</button>
+                    <!--<button style="background-color: #eeee;">Confirm</button>
+                    <button style="background-color: #eeee;">Cancel</button>-->
+                    <a class="button2" style="user-select: none;">Confirm</a>
+                    <a class="button2" style="user-select: none;">Cancel</a>
                 </div>
             </div>
         </div>

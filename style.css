@@ -24,7 +24,7 @@ body{
 }
 
 #preview_zone {
-    min-height: 500px;
+    min-height: 400px;
     margin: auto;
     margin-top: 0px;
 }
@@ -43,9 +43,7 @@ img {
 }
 
 button{
-    width: auto !important;
     display: inline-block !important;
-    border: none !important;
     background-color:  #393e46;
     margin: auto !important;
 }
@@ -71,3 +69,33 @@ button{
 .col-10 { width: 83.33%; }
 .col-11 { width: 91.66%; }
 .col-12 { width: 100%; }
+
+
+a.button2{
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+}
+a.button2:hover{
+    color:#DDDDDD;
+    border-color:#DDDDDD;
+}
+a.button2:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+}
+
+/*@media all and (max-width:30em){
+    a.button2{
+        display:block; margin:0.4em auto;
+    }
+}*/
