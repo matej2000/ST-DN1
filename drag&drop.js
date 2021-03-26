@@ -193,6 +193,7 @@ function addToGallery(){
         var fr = new FileReader();
         var preview = document.getElementById("image_preview");
         preview.src = this.childNodes[0].childNodes[0].src;
+        last_file = this.childNodes[0].childNodes[0];
         document.getElementById("description").value = this.childNodes[0].childNodes[1].innerHTML;
         visiblePreview();
         /*fr.addEventListener("load",function(){
@@ -205,18 +206,28 @@ function addToGallery(){
         fr.readAsDataURL(file);*/
     });
     
-    /*fr.onload = function(e){
-        console.log(e.target.result);
-    }*/
-    fr.addEventListener("load",function(){
-        preview.src = fr.result;
+
+    if(file instanceof File){
+        fr.addEventListener("load",function(){
+            preview.src = fr.result;
+            preview.style.display = "";
+            document.getElementById("drop_zone").appendChild(divOutside);
+        }, false)
+        clearPreview();
+        fr.readAsDataURL(file);
+        //document.getElementById("drop_zone").style.backgroundImage = "url('"+ file.name +"')";
+        console.log('... file.name = ' + file.name + ", type = " + file.type + ", src = " + file.src);
+    }
+    else{
+        preview.src = file.src;
         preview.style.display = "";
         document.getElementById("drop_zone").appendChild(divOutside);
-    }, false)
-    clearPreview();
-    fr.readAsDataURL(file);
-    //document.getElementById("drop_zone").style.backgroundImage = "url('"+ file.name +"')";
-    console.log('... file.name = ' + file.name + ", type = " + file.type + ", src = " + file.src);
+        clearPreview();
+    }
+}
+
+function lastFileImage(){
+
 }
 
 
