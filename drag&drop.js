@@ -143,7 +143,6 @@ function visiblePreview(){
     document.getElementById("dropP").style.visibility = "hidden";
     document.getElementById("buttons").style.visibility = "";
     var textArea = document.getElementById("description");
-    textArea.value = "";
     textArea.style.visibility = "";
     document.getElementById("image_preview").style.visibility = "";
 }
@@ -152,6 +151,7 @@ function clearPreview(){
     document.getElementById("buttons").style.visibility = "hidden";
     var textArea = document.getElementById("description");
     textArea.style.visibility = "hidden";
+    textArea.value = "";
     document.getElementById("image_preview").style.visibility = "hidden";
     document.getElementById("dropP").style.visibility = "";
     document.getElementById("selectFile").value = "";
@@ -187,20 +187,22 @@ function addToGallery(){
         document.getElementById("drop_zone").removeChild(this);
     });
 
-    divOutside.addEventListener('click', function (e){
+    divOutside.addEventListener('contextmenu', function (e){
         document.getElementById("drop_zone").removeChild(this);
         
         var fr = new FileReader();
-        var preview = this.childNodes[0].childNodes[0];
-
-        fr.addEventListener("load",function(){
+        var preview = document.getElementById("image_preview");
+        preview.src = this.childNodes[0].childNodes[0].src;
+        document.getElementById("description").value = this.childNodes[0].childNodes[1].innerHTML;
+        visiblePreview();
+        /*fr.addEventListener("load",function(){
             last_file = file;
             preview.src = fr.result;
             visiblePreview();
             preview.style.display = "";
             document.getElementById("border").style.outline= "";
         }, false)
-        fr.readAsDataURL(file);
+        fr.readAsDataURL(file);*/
     });
     
     /*fr.onload = function(e){
