@@ -166,16 +166,16 @@ function addToGallery(){
     var text = document.createElement("p");
     
     preview.setAttribute('draggable', false);
+    preview.style.maxWidth = "500px";
     divOutside.style.display = "inline-block";
     divOutside.style.padding = "20px 20px 20px 20px"
     divOutside.style.position = "relative";
     divInside.style.position = "relative";
     divInside.style.textAlign = "center";
     divInside.style.top = "50%";
-    divInside.style.width = "300px";
     divInside.style.padding = "10px 20px 40px 10px";
     /*divInside.style.backgroundColor = "#eeeeee";*/
-    text.style.width = "300px";
+    text.style.width = "100%";
     text.style.maxHeight = "100px";
     text.style.overflow = "hidden";
     text.innerHTML = document.getElementById("description").value;

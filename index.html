@@ -11,18 +11,29 @@
     <title>Gallery</title>
 </head>
 <body>
-    <div class = "container", style="background-color: #222831; text-align: left;">
+    <header>
+        <h1>Virtual gallery</h1>
+    </header>
+    <div class="wrap_imbox">
+        <div class="imbox">
+        </div>
+        <div class="heading">
+            <h1 class="head_jumbo">Create and manage</h1>
+            <p class="text_jumbo">your own virtual gallery</p>
+        </div>
+    </div>
+    <div class = "container" style="background-color: #222831; text-align: left;">
         <h1>Preview</h1>
     </div>
-    <div id="border" class="container" ondrop = "dropHandlerPreview(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
+    <div id="border" class="container" ondrop = "dropHandlerPreview(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);">
         <div id="select" class="container" >
             <input id="selectFile" type="file" multiple onchange="previewFile()">
         </div>
         <div id="preview_zone" class="container" >
             <div style="position: relative; text-align: center; display: inline-block;">
-                <div style="position: relative; top: 50%; width: 500px;">
-                   
-                    <img src="" id="image_preview" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
+                <div style="position: relative; top: 50%;">
+                
+                    <img src="//" id="image_preview" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
                     <textarea id="description"  placeholder="You can add a description here."  name="Description" rows="5" cols="30" style="resize: none; visibility: hidden;" maxlength="100"></textarea>
                     <div id="buttons" style="padding-top: 40px; visibility: hidden;">
                         <!--<button style="background-color: #eeee;">Confirm</button>
@@ -35,10 +46,13 @@
             <p id="dropP" style="margin: 0px; bottom: 10px !important;">Drag and drop an immage.</p>
         </div>
     </div>
-    <div class = "container", style="background-color: #222831; text-align: left;">
+
+
+
+    <div style="background-color: #222831; text-align: center; padding-top: 100px;">
         <h1>Gallery</h1>
     </div>
-    <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);" ondragover="dragOverHandler(event);">
+    <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);">
         
         
     
@@ -99,9 +113,8 @@
 
 
     </div>
-    <div id="drop_in">
-        <p id="dzP"></p>
-    </div>
+    
+    
 
     <!--
     <div id="preview_zone" style="position: relative; padding: 5px; display: inline-block;">
@@ -128,8 +141,13 @@
     <p onclick="editTrue(event);" contenteditable="true" style="max-height: 100px; overflow: hidden;"> </p>
 
     -->
-    <div class="footer">
-        <p>Footer</p>
-    </div>
+    
+    <footer>
+        <div id="footer" class="col-12">
+            <p>Viri</p>
+            <a>Podstran</a>
+        </div>
+    </footer>
 </body>
+
 </html>
