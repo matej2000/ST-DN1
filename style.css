@@ -111,9 +111,14 @@ body{
 
 }
 
-#cont_title{
+.cont_title{
     background-color: #222831;
     text-align: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
 }
 
 .gallery_heading{
@@ -220,9 +225,14 @@ a.button2:active{
 }
 
 #footer{
-    width: 100%;
-    background-color: #d65a31;
+    width: 105%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #eeeeee;
     text-align: center;
+    color: #222831 !important;
+    font-weight: bold;
+
 }
 
 @media all and (min-width: 600px){
@@ -254,9 +264,19 @@ a.button2:active{
 
 #source{
     color: #eeeeee;
-    
 }
 
 #source:hover{
     color: #BBBBBB;
+}
+
+.source2{
+    color: #222831;
+    text-decoration: none;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.source2:hover{
+    color: grey;
 }
