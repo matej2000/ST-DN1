@@ -112,6 +112,7 @@ function addToGallery(){
 
     console.log(document.getElementsByClassName("example_gallery")[0]);
     document.getElementsByClassName("example_gallery")[0].style.visibility = "hidden";
+    document.getElementsByClassName("example_gallery")[0].style.position = "absolute";
     
     divOutside.addEventListener('dblclick', function (e) {
         document.getElementById("drop_zone").removeChild(this);
