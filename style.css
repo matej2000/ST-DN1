@@ -44,6 +44,7 @@ body{
 .example_gallery{
     position:absolute;
     width: 100%;
+    overflow: hidden;
 }
 
 .center_div {
@@ -236,4 +237,18 @@ a.button2:active{
     .head_jumbo{
         font-size: 60px;
     }
+}
+
+
+#code{
+    text-align: left;
+}
+
+#source{
+    color: #eeeeee;
+    
+}
+
+#source:hover{
+    color: #BBBBBB;
 }
