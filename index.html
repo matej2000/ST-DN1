@@ -8,11 +8,11 @@
     <script src="drag&drop.js"></script>
     
 
-    <title>Gallery</title>
+    <title>Vitual gallery</title>
 </head>
 <body>
     <header>
-        <h1>Virtual gallery</h1>
+        <h1 id="he">Virtual gallery</h1>
     </header>
     <div class="wrap_imbox">
         <div class="imbox">
@@ -22,7 +22,7 @@
             <p class="text_jumbo">your own virtual gallery</p>
         </div>
     </div>
-    <div class = "container" style="background-color: #222831; text-align: left;">
+    <div id="cont_title" class = "container">
         <h1>Preview</h1>
     </div>
     <div id="border" class="container" ondrop = "dropHandlerPreview(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);">
@@ -30,117 +30,43 @@
             <input id="selectFile" type="file" multiple onchange="previewFile()">
         </div>
         <div id="preview_zone" class="container" >
-            <div style="position: relative; text-align: center; display: inline-block;">
-                <div style="position: relative; top: 50%;">
+            <div class="wrap1">
+                <div class="wrap2">
                 
-                    <img src="//" id="image_preview" alt="Image preview" onerror="this.style.display='none'" style="-webkit-user-drag: none;">
-                    <textarea id="description"  placeholder="You can add a description here."  name="Description" rows="5" cols="30" style="resize: none; visibility: hidden;" maxlength="100"></textarea>
-                    <div id="buttons" style="padding-top: 40px; visibility: hidden;">
-                        <!--<button style="background-color: #eeee;">Confirm</button>
-                        <button style="background-color: #eeee;">Cancel</button>-->
-                        <a class="button2" style="user-select: none;" onclick="addToGallery();">Confirm</a>
-                        <a class="button2" style="user-select: none;" onclick="clearPreview();">Cancel</a>
+                    <img src="//" id="image_preview" alt="Image preview" onerror="this.style.display='none'">
+                    <textarea id="description"  placeholder="You can add a description here."  name="Description" rows="5" cols="30" maxlength="100"></textarea>
+                    <div id="buttons">
+                        <a class="button2" onclick="addToGallery();">Confirm</a>
+                        <a class="button2" onclick="clearPreview();">Cancel</a>
                     </div>
                 </div>
             </div>
-            <p id="dropP" style="margin: 0px; bottom: 10px !important;">Drag and drop an immage.</p>
         </div>
+        <footer>
+            <p id="dropP">Drag and drop an immage.</p>
+        </footer>
     </div>
 
 
 
-    <div style="background-color: #222831; text-align: center; padding-top: 100px;">
+    <div class="gallery_heading">
         <h1>Gallery</h1>
     </div>
-    <div class = "container" id = "drop_zone" ondrop = "dropHandler(event);" ondragover="dragOverHandler(event);" ondragleave="dragLeaveHandler(event);" ondragenter = "dragEnterHandler(event);">
+    <div class = "container" id = "drop_zone">
         
-        
-    
-        
-        <!--Carousel wraper-->
-        <!--
-        <div id="gallery" class="carousel slide" data-interval="false" data-md-ride="carousel">
-            <div class="carousel-inner py-4">
+        <div class="example_gallery">
+            
+            <div class="example_element">
+                    <img src="art1.jpg" >
+                    <p>Gallery 1</p>
+            </div>
 
-                <div>
-                    <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#gallery" data-mdb-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"  data-bs-target="gallery"></span>
-                    </button>
-        
-                    <button class="carousel-control-next position-relative" type="button" data-mdb-target="#gallery" data-mdb-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                </div>
-
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                        <div class="col-sm">
-                            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                        </div>
-                        <div class="col-sm">
-                            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                        </div>
-                        <div class="col-sm">
-                            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm">
-                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                            </div>
-                            <div class="col-sm">
-                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                            </div>
-                            <div class="col-sm">
-                                <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="example_element" >
+                <img src="art2.jpg" >
+                <p>Gallery 2</p>
             </div>
         </div>
-        -->
-
-        <!--Coursel wrapper-->
-
-
     </div>
-    
-    
-
-    <!--
-    <div id="preview_zone" style="position: relative; padding: 5px; display: inline-block;">
-        <div style="position:relative; top:50%; width: 300px;">
-            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-            <input type="text" style="width: 300px;">
-        </div>
-    </div>
-
-    <div id="preview_zone" style="position: relative; padding: 5px; display: inline-block;" >
-        <div style="position:relative; top:50%; background-color: white; width: 300px;">
-            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-            <input type="text" style="width: 300px;">
-        </div>
-    </div>
-
-    <div id="preview_zone" style="position: relative; padding: 200px 110px 110px 30px; display: inline-block;">
-        <div style="position:relative; top:50%; background-color: white; width: 300px;">
-            <img src="virus2.png" class="fill" alt="Image preview" onerror="this.style.display='none'">
-            <input type="text" style="width: 300px;">
-        </div>
-    </div>
-
-    <p onclick="editTrue(event);" contenteditable="true" style="max-height: 100px; overflow: hidden;"> </p>
-
-    -->
     
     <footer>
         <div id="footer" class="col-12">
