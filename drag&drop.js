@@ -116,6 +116,7 @@ function addToGallery(){
     
     divOutside.addEventListener('dblclick', function (e) {
         document.getElementById("drop_zone").removeChild(this);
+        showExample();
     });
 
     divOutside.addEventListener('contextmenu', function (e){
@@ -127,6 +128,7 @@ function addToGallery(){
         last_file = this.childNodes[0].childNodes[0];
         document.getElementById("description").value = this.childNodes[0].childNodes[1].innerHTML;
         visiblePreview();
+        showExample();
     });
     
 
@@ -145,6 +147,13 @@ function addToGallery(){
         preview.style.display = "";
         document.getElementById("drop_zone").appendChild(divOutside);
         clearPreview();
+    }
+}
+
+function showExample(){
+    if(document.getElementById("drop_zone").childNodes.length <= 3){
+        document.getElementsByClassName("example_gallery")[0].style.position = "relative";
+        document.getElementsByClassName("example_gallery")[0].style.visibility = "visible";
     }
 }
 
